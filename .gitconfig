@@ -1,0 +1,38 @@
+[user]
+	name = sharonrh
+	email = sharon.rhe@gmail.com
+[credential]
+	helper = cache --timeout=36000
+[push]
+        default = upstream
+[pull]
+        default = current
+[alias]
+	ac = !git add -A && git commit -m
+	amend = commit --amend
+	br = branch
+	cm = commit -m
+	co = checkout
+	d = diff
+	dl = diff HEAD^
+	df = "!git ll -1"
+	l = log
+	la = "!git config -l | grep alias | cut -c 7-"
+	ll = log --decorate --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset'
+	lo = log --oneline --decorate
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --\n
+	po = pull origin
+	pop = stash pop
+	pr = pull --rebase origin
+	pso = push origin
+	rh = reset --hard
+	s = status
+	sh = stash
+	sl = stash list
+	u = reset --soft HEAD~1
+   	hist = "log --graph --pretty=format:'%Cred%h%Creset %d %s %Cgreen(%cr)%Creset %Cblue[%an]%Creset' --abbrev-commit --date=relative"
+    	today = "log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative"
+[core]
+	editor = vim
+[color]
+	ui = true
