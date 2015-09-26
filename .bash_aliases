@@ -10,5 +10,8 @@ alias hf='history | grep'
 alias p='ps ax | grep'
 
 # run SEGA emu as bg process
-alias sega='wine Downloads/Fusion_Emu/Fusion.exe &'
-
+sega() {
+  wine Downloads/Fusion_Emu/Fusion.exe &
+  disown
+  exit
+}
