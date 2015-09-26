@@ -120,7 +120,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/usr/lib/elixir/elixir-1.0.0/bin"
 
 # make git life easier 
-alias g='git'
 complete -o default -o nospace -F _git g
 source ~/git-completion.bash	
 
