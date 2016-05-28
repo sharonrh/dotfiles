@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"API Blueprint",
+		"Better CoffeeScript",
+		"CTags",
+		"EditorConfig",
+		"Elixir",
+		"GitGutter",
+		"GitSavvy",
+		"Markdown Preview",
+		"Package Control",
+		"Predawn",
+		"Prolog",
+		"RuboCop",
+		"SublimeLinter",
+		"SublimeLinter-contrib-reek",
+		"Theme - Spacegray",
+		"Vintageous"
+	]
+}

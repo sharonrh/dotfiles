@@ -1,0 +1,18 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"file_exclude_patterns":
+	[
+		".tags"
+	],
+	"font_size": 9,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"overlay_scroll_bars": "enabled",
+	"predawn_findreplace_small": true,
+	"predawn_sidebar_small": true,
+	"predawn_tabs_small": true,
+	"show_auto_correct_warning": false,
+	"theme": "predawn.sublime-theme"
+}

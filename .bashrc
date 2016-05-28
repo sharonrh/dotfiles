@@ -116,6 +116,7 @@ fi
 
 export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/usr/lib/elixir/elixir-1.0.0/bin"
 
@@ -125,3 +126,5 @@ source ~/git-completion.bash
 
 # swearing helps. sometimes.
 eval "$(thefuck --alias)"
+
+export EDITOR='vim'
