@@ -8,6 +8,7 @@
 [alias]
 	ac = !git add -A && git commit -m
 	amend = commit --amend
+	ap = "!git commit --amend --author='Product <product@bukalapak.com>'"
 	br = branch
 	bye = branch -D
 	cam = git add -A && git commit --amend
@@ -23,13 +24,14 @@
 	ll = log --decorate --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset'
 	lo = log --oneline --decorate
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --\n
-	master = checkout master
+	m = checkout master
 	po = pull origin
 	pop = stash pop
 	pr = pull --rebase origin
+	prom = !git fo master && git rebase origin/master
 	psf = push -f origin
 	pso = push origin
-	psk = push kumbokarno
+	psd = push deploy
 	psu = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
 	pt = push --tags
 	ra = rebase --abort

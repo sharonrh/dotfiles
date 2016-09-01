@@ -16,13 +16,14 @@ alias tagem='ctags -R -f .tags . `bundle show --paths`'
 alias tmux='TERM=screen-256color-bce tmux'
 alias imagery="cd $IMAGERY_PATH"
 
+alias purge_test='RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rake db:schema:load'
+
 # easier ssh
 to() {
   if [ $# != 1 ] ; then
     echo "usage: <host>"
     return
   fi
-  echo $LOGIN_NAME
   ssh -l $LOGIN_NAME $1
 }
 
