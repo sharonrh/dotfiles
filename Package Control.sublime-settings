@@ -13,6 +13,7 @@
 		"GitGutter",
 		"GitSavvy",
 		"Markdown Preview",
+		"Origami",
 		"Package Control",
 		"Predawn",
 		"Prolog",
@@ -20,6 +21,7 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-reek",
 		"Theme - Spacegray",
-		"Vintageous"
+		"Vintageous",
+		"Wombat Color Scheme"
 	]
 }

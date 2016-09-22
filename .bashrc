@@ -119,6 +119,8 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/usr/lib/elixir/elixir-1.0.0/bin"
+export PATH="$PATH:/usr/local/android-studio/bin"
+export PATH="$PATH:/usr/share/elasticsearch/bin"
 
 # make git life easier 
 complete -o default -o nospace -F _git g

@@ -43,7 +43,7 @@
 	sl = stash list
 	t = "!git tag `date +'v%Y%m%d%H%M%S'`"
 	td = "!git tag -l | xargs git tag -d"
-	tl = tag -l
+	tl = "!git tag -l | tail -n 1"
 	u = reset --soft HEAD~1
    	hist = "log --graph --pretty=format:'%Cred%h%Creset %d %s %Cgreen(%cr)%Creset %Cblue[%an]%Creset' --abbrev-commit --date=relative"
     	today = "log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative"

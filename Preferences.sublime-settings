@@ -1,10 +1,11 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Wombat Color Scheme/Wombat.tmTheme",
 	"file_exclude_patterns":
 	[
 		".tags"
 	],
-	"font_size": 9,
+	"font_face": "Source Code Pro",
+	"font_size": 10,
 	"ignored_packages":
 	[
 		"Vintage"
