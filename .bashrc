@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export GOPATH="$HOME/go"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -57,10 +59,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[00m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(__git_ps1 "(%s)")\[\033[00m\]\$ '
 else
-   PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-   # PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ ' # show git repo and branch name
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 "(%s)")\$ '
+    #PS1='\u@\h \W$(__git_ps1 " (%s)")\$ ' # show git repo and branch name
 fi
 unset color_prompt force_color_prompt
 
@@ -114,7 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -124,9 +125,9 @@ export PATH="$PATH:/usr/share/elasticsearch/bin"
 
 # make git life easier 
 complete -o default -o nospace -F _git g
-source ~/git-completion.bash	
 
-# swearing helps. sometimes.
-eval "$(thefuck --alias)"
+if [ -f ~/git-completion.bash ]; then
+  . ~/git-completion.bash
+fi
 
 export EDITOR='vim'

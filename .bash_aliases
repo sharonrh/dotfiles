@@ -1,3 +1,4 @@
+alias sudo='sudo '
 alias g='git'
 
 alias ..='cd ..'
@@ -5,18 +6,27 @@ alias ...='cd ../..'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
+alias bl='cd ~/BL/mothership'
 alias h='history'
 alias hf='history | grep'
 alias p='ps ax | grep'
 alias sb='source ~/.bash_profile'
 
 alias back='rake backburner:work'
-alias tagem='ctags -R -f .tags . `bundle show --paths`'
 
 alias tmux='TERM=screen-256color-bce tmux'
 alias imagery="cd $IMAGERY_PATH"
 
-alias purge_test='RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rake db:schema:load'
+alias purge_test='RAILS_ENV=test rake db:drop db:create db:schema:load'
+alias recon='sudo service network-manager restart'
+
+lcp() {
+  if [ $# != 1 ] ; then
+    echo "usage: <key>"
+    return
+  fi
+  lpass show -c --password $1 && echo "copied"
+}
 
 # easier ssh
 to() {
@@ -25,6 +35,20 @@ to() {
     return
   fi
   ssh -l $LOGIN_NAME $1
+}
+
+full_deploy() {
+  g co -b `date +'release-%Y%m%d-%H%M%S'`
+  echo "pushing to github.."
+  g psu
+  echo "pushing to deploy server.."
+  g psd
+  deploy
+}
+
+deploy() {
+  echo "deploying.."
+  BRANCH=`git rev-parse --abbrev-ref HEAD` cap deploy
 }
 
 # run SEGA emu as bg process
