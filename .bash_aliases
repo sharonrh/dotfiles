@@ -71,3 +71,11 @@ legacy() {
   git show "$sha:$path" > $1
   echo "Copied $1 to $2"
 }
+
+resurrect() {
+  systemctl start mongodb.service
+  systemctl start mariadb.service
+  systemctl start redis.service
+  systemctl start elasticsearch.service
+  systemctl start memcached.service
+}
