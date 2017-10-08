@@ -11,16 +11,17 @@
 		"EditorConfig",
 		"GitGutter",
 		"GitSavvy",
+		"GoGuru",
 		"GoSublime",
 		"Markdown Preview",
 		"Origami",
 		"Package Control",
 		"Predawn",
 		"RuboCop",
+		"Six",
 		"SublimeLinter",
 		"SublimeLinter-contrib-reek",
 		"Theme - Spacegray",
-		"Vintageous",
 		"Wombat Color Scheme"
 	]
 }

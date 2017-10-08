@@ -117,6 +117,8 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/usr/local/android-studio/bin"
 
+export CDPATH=":$HOME/BL:$GOPATH/src/github.com/bukalapak:"
+
 # make git life easier 
 complete -o default -o nospace -F _git g
 
@@ -124,4 +126,7 @@ if [ -f /usr/share/git/completion/git-completion.bash ]; then
   . /usr/share/git/completion/git-completion.bash
 fi
 
+[[ -f ~/.bash_secret ]] && . ~/.bash_secret
+
 export EDITOR='vim'
+export TERM=xterm-256color
