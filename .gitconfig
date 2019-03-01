@@ -5,13 +5,15 @@
 	helper = cache --timeout=36000
 [push]
 	default = simple
+[url "git@github.com:"]
+        insteadOf = https://github.com/
 [alias]
 	ac = !git add -A && git commit -m
 	amend = commit --amend
 	ap = "!git commit --amend --author='Product <product@bukalapak.com>'"
 	br = branch
 	bye = branch -D
-	cr= !git br | grep release | xargs git bye
+	cr= !git br | grep "release-" | xargs git bye
 	cam = git add -A && git commit --amend
 	cm = commit -m
 	co = checkout
@@ -29,23 +31,24 @@
 	lo = log --oneline --decorate
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --\n
 	m = checkout master
-	po ="!git pull origin `git rev-parse --abbrev-ref HEAD`"
+	po ="!git pull origin `git this`"
 	pop = stash pop
 	pr = "!git pull --rebase origin `git this`"
 	prom = !git fo master && git rebase origin/master
 	psf = push -f origin
 	pso = push origin
 	psd = push deploy
-	psu = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
+	psu = "!git push --set-upstream origin `git this`"
 	pt = push --tags
 	ra = rebase --abort
 	rc = rebase --continue
 	ri = "!f() { git rebase -i HEAD~$1; }; f"
-	rr = "!git log master..`git rev-parse --abbrev-ref HEAD` --oneline | wc -l"
+	rr = "!git log master..`git this` --oneline | wc -l"
 	rh = reset --hard
 	s = status
-	sh = stash save -u
+	sh = stash push -u
 	sl = stash list
+	t = "!git checkout -b `date +"release-%Y%m%d-%H%M%S"`"
 	 
 	u = reset --soft HEAD~1
    	hist = "log --graph --pretty=format:'%Cred%h%Creset %d %s %Cgreen(%cr)%Creset %Cblue[%an]%Creset' --abbrev-commit --date=relative"
