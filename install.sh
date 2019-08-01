@@ -10,3 +10,5 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/dotfiles/settings.json ~/.config/Code/User/settings.json
+ln -s ~/dotfiles/keybindings.json ~/.config/Code/User/keybindings.json
