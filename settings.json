@@ -1,0 +1,23 @@
+{
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Wombat",
+    "editor.fontFamily": "Source Code Pro",
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "window.zoomLevel": 0,
+    "amVim.bindCtrlCommands": false,
+    "amVim.mimicVimSearchBehavior": false,
+    "amVim.vimStyleNavigationInListView": false,
+    "vscodeWorkspaceSwitcher.paths": ["/home/sharon/vscodews"],
+    // allow exit/switch workspace without saving untitled files
+    "files.hotExit": "onExitAndWindowClose",
+    "workbench.enableExperiments": false,
+    "markdown.extension.toc.githubCompatibility": true,
+    "go.useLanguageServer": true,
+    "go.formatTool": "gofmt",
+    "go.lintTool": "golangci-lint",
+    "go.lintOnSave": "file",
+    "gitlens.views.lineHistory.avatars": false,
+}
