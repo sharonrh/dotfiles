@@ -1,0 +1,48 @@
+[alias]
+	ac = !git add -A && git commit -m
+	amend = commit --amend
+	br = branch
+	bye = branch -D
+	cr= !git br | grep "release-" | xargs git bye
+	cam = git add -A && git commit --amend
+	cl = clean -df
+	cm = commit -m
+	co = checkout
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	d = diff
+	dl = diff HEAD^
+	df = "!git ll -1"
+	fa = fetch --all
+	fc = "!f() { git fo $1 && git co $1; }; f"
+	fo = fetch origin
+	l = log
+	la = "!git config -l | grep alias | cut -c 7-"
+	ll = log --decorate --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset'
+	lo = log --oneline --decorate
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --\n
+	m = checkout master
+	po ="!git pull origin `git this`"
+	pop = stash pop
+	pr = "!git pull --rebase origin `git this`"
+	prom = !git fo master && git rebase origin/master
+	psf = push -f origin
+	psc = push cloud
+	pso = push origin
+	psu = "!git push --set-upstream origin `git this`"
+	pt = push --tags
+	ra = rebase --abort
+	rc = rebase --continue
+	ri = "!f() { git rebase -i HEAD~$1; }; f"
+	rr = "!git log master..`git this` --oneline | wc -l"
+	rh = reset --hard
+	s = status
+	sh = stash push -u
+	sl = stash list
+	tr = "!git checkout -b `date +"release-%Y%m%d-%H%M%S"`"
+	ts = "!git checkout -b `date +"staging-%Y%m%d-%H%M%S"`"
+	 
+	u = reset --soft HEAD~1
+   	hist = "log --graph --pretty=format:'%Cred%h%Creset %d %s %Cgreen(%cr)%Creset %Cblue[%an]%Creset' --abbrev-commit --date=relative"
+    	today = "log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative"
+	this = rev-parse --abbrev-ref HEAD

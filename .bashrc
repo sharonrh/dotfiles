@@ -117,8 +117,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/usr/local/android-studio/bin"
 
-export CDPATH=":$HOME/BL:$GOPATH/src/github.com/bukalapak:"
-
 # make git life easier 
 complete -o default -o nospace -F _git g
 
