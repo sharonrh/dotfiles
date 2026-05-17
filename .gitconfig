@@ -1,8 +1,8 @@
-[includeIf "gitdir:~/code/HF"]
-	path = ~/.gitconfig-bitbucket
+[includeIf "gitdir:~/code/HF/"]
+	path = ~/.gitconfig_bitbucket
 
-[includeIf "gitdir:~/code/personal"]
-	path = ~/.gitconfig-github
+[includeIf "gitdir:~/code/personal/"]
+	path = ~/.gitconfig_github
 
 [credential]
 	helper = cache --timeout=36000
@@ -18,4 +18,4 @@
 	ui = true
 
 [include]
-	path = ~/.gitconfig-aliases
+	path = ~/.gitconfig_aliases
